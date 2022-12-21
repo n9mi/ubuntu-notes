@@ -47,3 +47,18 @@ then reboot the machine.
 nvidia-smi
 nvcc -V
 ```
+
+###  Install CUDNN
+Please download the local installers from https://developer.nvidia.com/rdp/cudnn-download. They may ask you to make Nvidia developer account and accept the agreement license agreement before downloading, but it's completely free. 
+![image](https://user-images.githubusercontent.com/113373725/209017145-8d667e13-aad8-468a-b1f2-f12bf3d8b37f.png)
+
+```
+sudo cp /var/cudnn-local-repo-ubuntu2204-8.7.0.84/cudnn-local-BF23AD8A-keyring.gpg /usr/share/keyrings/
+sudo dpkg -i cudnn-local-repo-ubuntu2204-8.7.0.84_1.0-1_amd64.deb
+```
+And wait until the installation is finished.
+
+### Verify the cudNN installation
+```
+sudo apt search cudnn | grep installed
+```
