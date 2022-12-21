@@ -49,7 +49,7 @@ nvcc -V
 ```
 
 ###  Install CUDNN
-Please download the local installers from https://developer.nvidia.com/rdp/cudnn-download. They may ask you to make Nvidia developer account and accept the agreement license agreement before downloading, but it's completely free. 
+Please download the local installers from https://developer.nvidia.com/rdp/cudnn-download. They may ask you to make Nvidia developer account and accept the agreement license before downloading, but it's completely free. 
 ![image](https://user-images.githubusercontent.com/113373725/209017145-8d667e13-aad8-468a-b1f2-f12bf3d8b37f.png)
 
 ```
