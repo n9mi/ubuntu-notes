@@ -1,3 +1,8 @@
+### Prerequities
+```
+sudo apt-get install build-essentials
+```
+
 ### Add PPA GPU Drivers Repository to the System
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
