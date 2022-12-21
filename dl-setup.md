@@ -1,4 +1,4 @@
-### Prerequities
+### Prerequisites
 ```
 sudo apt-get install build-essentials
 ```
