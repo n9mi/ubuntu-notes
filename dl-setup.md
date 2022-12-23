@@ -62,3 +62,44 @@ And wait until the installation is finished.
 ```
 sudo apt search cudnn | grep installed
 ```
+
+### Conda installation
+Please download from the official source and
+```
+sudo chmod 755 <conda_installer>
+```
+
+Add conda to path
+```
+sudo mousepad ~/.bashrc
+
+export PATH=~/anaconda3/bin:$PATH
+
+source ~/.bashrc
+```
+
+Check the installation. You may change to new terminal to see the differences.
+```
+conda --version
+```
+
+### Create conda env
+```
+conda create -n new_env
+```
+
+### If above command doesn't work, please try
+```
+source ~/anaconda3/etc/profile.d/conda.sh
+```
+Then recreate it
+
+### Activate env
+```
+conda activate new_env
+```
+
+### Deactivate env
+```
+conda deactivate new_env
+```
