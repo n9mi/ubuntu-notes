@@ -103,3 +103,9 @@ conda activate new_env
 ```
 conda deactivate new_env
 ```
+
+### Turn off the default (base) in terminal
+```
+conda config --set auto_activate_base False
+```
+Then restart the terminal.
