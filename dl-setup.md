@@ -109,3 +109,19 @@ conda deactivate new_env
 conda config --set auto_activate_base False
 ```
 Then restart the terminal.
+
+### Installing pytorch via Pip
+```
+sudo apt-get install -y python3-venv
+python -m venv torch_gpu
+source torch_gpu/bin/activate
+pip3 install torch torchvision torchaudio
+```
+
+### Check the installed pytorch
+```
+python3
+>>> import torch
+>>> torch.cuda.is_available() // will print ex: True
+>>> torch.cuda.get_device_name(0) // will print ex: 'NVIDIA GeForce GTC 950M'
+```
