@@ -123,5 +123,5 @@ pip3 install torch torchvision torchaudio
 python3
 >>> import torch
 >>> torch.cuda.is_available() // will print ex: True
->>> torch.cuda.get_device_name(0) // will print ex: 'NVIDIA GeForce GTC 950M'
+>>> torch.cuda.get_device_name(0) // will print ex: 'NVIDIA GeForce GTX 950M'
 ```
