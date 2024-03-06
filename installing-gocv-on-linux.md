@@ -47,7 +47,7 @@ Output will be:
 
 4. Start compilation process
 ```
-  make 
+make 
 ```
 Notes: be careful with -j parameter, if you set the -j parameter wrong, example: equal or more than 'nproc', it'll cause your computer to force shutdown. 
 
@@ -68,7 +68,7 @@ GO111MODULE=off go get -u -d gocv.io/x/gocv
 
 8. Verifying the gocv installation
 ```
-  cd ~/go/src/gocv.io/x/gocv
+cd ~/go/src/gocv.io/x/gocv
 ```
 
 Output will be:
@@ -77,26 +77,26 @@ gocv version: 0.35.0
 opencv lib version: 4.8.1
 ```
 
-Misscelaneous
-A. Error while loading shared libraries: libopencv_highgui.so.4.4: cannot open shared object file: No such file or directory when running
+# Misscelaneous 
+## A. Error while loading shared libraries: libopencv_highgui.so.4.4: cannot open shared object file: No such file or directory when running
 ```
-    go run ./cmd/version/main.go
+go run ./cmd/version/main.go
 ```
 Solution
 1. Ensure that libopencv_mcc.so.408 in present in /usr/local/lib
 2. Create configuration in /etc/ld.so.conf.d by
 ```
-    sudo nano /etc/ld.so.conf.d/opencv.conf
+sudo nano /etc/ld.so.conf.d/opencv.conf
 
-    /usr/local/lib/
+/usr/local/lib/
 ```
 3. Then run
 ```
-    sudo ldconfig -v
+sudo ldconfig -v
 ```
 4. Try run previous command
 ```
-    go run ./cmd/version/main.go
+go run ./cmd/version/main.go
 ```
 
    
