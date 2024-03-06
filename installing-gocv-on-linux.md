@@ -69,7 +69,6 @@ GO111MODULE=off go get -u -d gocv.io/x/gocv
 8. Verifying the gocv installation
 ```
   cd ~/go/src/gocv.io/x/gocv
-  go run ./cmd/version/main.go
 ```
 
 Output will be:
@@ -78,6 +77,30 @@ gocv version: 0.35.0
 opencv lib version: 4.8.1
 ```
 
+Misscelaneous
+A. Error while loading shared libraries: libopencv_highgui.so.4.4: cannot open shared object file: No such file or directory when running
+```
+    go run ./cmd/version/main.go
+```
+Solution
+1. Ensure that libopencv_mcc.so.408 in present in /usr/local/lib
+2. Create configuration in /etc/ld.so.conf.d by
+```
+    sudo nano /etc/ld.so.conf.d/opencv.conf
+
+    /usr/local/lib/
+```
+3. Then run
+```
+    sudo ldconfig -v
+```
+4. Try run previous command
+```
+    go run ./cmd/version/main.go
+```
+
+   
 Credit:
 - https://linuxize.com/post/how-to-install-opencv-on-ubuntu-20-04/
 - https://gocv.io/getting-started/linux/
+- https://stackoverflow.com/questions/62621706/libopencv-highgui-so-4-4-cannot-open-shared-object-file-no-such-file-or-direct
