@@ -42,7 +42,7 @@ Output will be:
 ```
 -- Configuring done
 -- Generating done
--- Build files have been written to: {$HOME}/opencv_build/opencv/build
+-- Build files have been written to: ${HOME}/opencv_build/opencv/build
 ```
 
 4. Start compilation process
@@ -77,3 +77,7 @@ Output will be:
 gocv version: 0.35.0
 opencv lib version: 4.8.1
 ```
+
+Credit:
+- https://linuxize.com/post/how-to-install-opencv-on-ubuntu-20-04/
+- https://gocv.io/getting-started/linux/
