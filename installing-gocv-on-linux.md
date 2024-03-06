@@ -69,6 +69,7 @@ GO111MODULE=off go get -u -d gocv.io/x/gocv
 8. Verifying the gocv installation
 ```
 cd ~/go/src/gocv.io/x/gocv
+go run ./cmd/version/main.go
 ```
 
 Output will be:
